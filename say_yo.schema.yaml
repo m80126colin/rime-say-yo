@@ -1,0 +1,93 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: say_yo
+  name: Say요韓語
+  version: "0.1"
+  author:
+    - Hsu Karinsu <m80126colin@gmail.com>
+  description: |
+    韓語拼音輸入法。
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 中文, 西文 ]
+  - name: full_shape
+    states: [ 半角, 全角 ]
+  - name: simplification
+    states: [ 漢字, 汉字 ]
+  - name: ascii_punct
+    states: [ 。，, ．， ]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - fluency_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - echo_translator
+    - table_translator
+    - punct_translator
+    - reverse_lookup_translator
+    - script_translator
+  filters:
+    - simplifier
+    - uniquifier
+
+speller:
+  alphabet: qwertyuiopasdfghjklzxcvbnm
+  algebra:
+    - xform/ㅂ/q/
+    - xform/ㅃ/qq/
+    - xform/ㅈ/w/
+    - xform/ㅉ/ww/
+    - xform/ㄷ/e/
+    - xform/ㄸ/ee/
+    - xform/ㄱ/r/
+    - xform/ㄲ/rr/
+    - xform/ㅅ/t/
+    - xform/ㅆ/tt/
+    - xform/ㅛ/y/
+    - xform/ㅕ/u/
+    - xform/ㅑ/i/
+    - xform/ㅐ/o/
+    - xform/ㅒ/oo/
+    - xform/ㅔ/p/
+    - xform/ㅖ/pp/
+    - xform/ㅁ/a/
+    - xform/ㄴ/s/
+    - xform/ㅇ/d/
+    - xform/ㄹ/f/
+    - xform/ㅎ/g/
+    - xform/ㅗ/h/
+    - xform/ㅓ/j/
+    - xform/ㅏ/k/
+    - xform/ㅣ/l/
+    - xform/ㅋ/z/
+    - xform/ㅌ/x/
+    - xform/ㅊ/c/
+    - xform/ㅍ/v/
+    - xform/ㅠ/b/
+    - xform/ㅜ/n/
+    - xform/ㅡ/m/
+
+translator:
+  dictionary: say_yo
+
+punctuator:
+  import_preset: default
+
+key_binder:
+  import_preset: default
