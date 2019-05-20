@@ -13,12 +13,6 @@ switches:
   - name: ascii_mode
     reset: 0
     states: [ 中文, 西文 ]
-  - name: full_shape
-    states: [ 半角, 全角 ]
-  - name: simplification
-    states: [ 漢字, 汉字 ]
-  - name: ascii_punct
-    states: [ 。，, ．， ]
 
 engine:
   processors:
@@ -48,24 +42,44 @@ engine:
 
 speller:
   alphabet: qwertyuiopasdfghjklzxcvbnm
+  initials: rsefaqtdwczxvg
+  finals: rsefaqtdwczxvgkoijpuhynbml
   algebra:
+    - xform/ㄲ/ㄱㄱ/
+    - xform/ㄳ/ㄱㅅ/
+    - xform/ㄵ/ㄴㅈ/
+    - xform/ㄶ/ㄴㅎ/
+    - xform/ㄸ/ㄷㄷ/
+    - xform/ㄺ/ㄹㄱ/
+    - xform/ㄻ/ㄹㅁ/
+    - xform/ㄼ/ㄹㅂ/
+    - xform/ㄽ/ㄹㅅ/
+    - xform/ㄾ/ㄹㅌ/
+    - xform/ㄿ/ㄹㅍ/
+    - xform/ㅀ/ㄹㅎ/
+    - xform/ㅃ/ㅂㅂ/
+    - xform/ㅄ/ㅂㅅ/
+    - xform/ㅆ/ㅅㅅ/
+    - xform/ㅉ/ㅈㅈ/
+    - xform/ㅒ/ㅐㅐ/
+    - xform/ㅖ/ㅔㅔ/
+    - xform/ㅘ/ㅗㅏ/
+    - xform/ㅙ/ㅗㅐ/
+    - xform/ㅚ/ㅗㅣ/
+    - xform/ㅝ/ㅜㅓ/
+    - xform/ㅞ/ㅜㅔ/
+    - xform/ㅟ/ㅜㅣ/
+    - xform/ㅢ/ㅡㅣ/
     - xform/ㅂ/q/
-    - xform/ㅃ/qq/
     - xform/ㅈ/w/
-    - xform/ㅉ/ww/
     - xform/ㄷ/e/
-    - xform/ㄸ/ee/
     - xform/ㄱ/r/
-    - xform/ㄲ/rr/
     - xform/ㅅ/t/
-    - xform/ㅆ/tt/
     - xform/ㅛ/y/
     - xform/ㅕ/u/
     - xform/ㅑ/i/
     - xform/ㅐ/o/
-    - xform/ㅒ/oo/
     - xform/ㅔ/p/
-    - xform/ㅖ/pp/
     - xform/ㅁ/a/
     - xform/ㄴ/s/
     - xform/ㅇ/d/
@@ -85,6 +99,8 @@ speller:
 
 translator:
   dictionary: say_yo
+  preedit_format:
+    - xlit|qwertyuiopasdfghjklzxcvbnm|ㅂㅈㄷㄱㅅㅛㅕㅑㅐㅔㅁㄴㅇㄹㅎㅗㅓㅏㅣㅋㅌㅊㅍㅠㅜㅡ|
 
 punctuator:
   import_preset: default
