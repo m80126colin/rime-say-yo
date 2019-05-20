@@ -43,7 +43,7 @@ engine:
 speller:
   alphabet: qwertyuiopasdfghjklzxcvbnm
   initials: rsefaqtdwczxvg
-  finals: rsefaqtdwczxvgkoijpuhynbml
+  # finals: rsefaqtdwczxvgkoijpuhynbml
   algebra:
     - xform/ㄲ/ㄱㄱ/
     - xform/ㄳ/ㄱㅅ/
@@ -101,6 +101,31 @@ translator:
   dictionary: say_yo
   preedit_format:
     - xlit|qwertyuiopasdfghjklzxcvbnm|ㅂㅈㄷㄱㅅㅛㅕㅑㅐㅔㅁㄴㅇㄹㅎㅗㅓㅏㅣㅋㅌㅊㅍㅠㅜㅡ|
+    - xform/ㄱㄱ/ㄲ/
+    - xform/ㄱㅅ/ㄳ/
+    - xform/ㄴㅈ/ㄵ/
+    - xform/ㄴㅎ/ㄶ/
+    - xform/ㄷㄷ/ㄸ/
+    - xform/ㄹㄱ/ㄺ/
+    - xform/ㄹㅁ/ㄻ/
+    - xform/ㄹㅂ/ㄼ/
+    - xform/ㄹㅅ/ㄽ/
+    - xform/ㄹㅌ/ㄾ/
+    - xform/ㄹㅍ/ㄿ/
+    - xform/ㄹㅎ/ㅀ/
+    - xform/ㅂㅂ/ㅃ/
+    - xform/ㅂㅅ/ㅄ/
+    - xform/ㅅㅅ/ㅆ/
+    - xform/ㅈㅈ/ㅉ/
+    - xform/ㅐㅐ/ㅒ/
+    - xform/ㅔㅔ/ㅖ/
+    - xform/ㅗㅏ/ㅘ/
+    - xform/ㅗㅐ/ㅙ/
+    - xform/ㅗㅣ/ㅚ/
+    - xform/ㅜㅓ/ㅝ/
+    - xform/ㅜㅔ/ㅞ/
+    - xform/ㅜㅣ/ㅟ/
+    - xform/ㅡㅣ/ㅢ/
 
 punctuator:
   import_preset: default
